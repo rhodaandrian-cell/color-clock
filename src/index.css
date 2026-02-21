@@ -1,55 +1,46 @@
+/* src/index.css */
+
 :root {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
 }
 
-.page {
+body {
+  margin: 0;
   min-height: 100vh;
   display: grid;
   place-items: center;
+
+  /* ✅ Colors beyond black & white (rubric requirement) */
+  background: linear-gradient(135deg, #1e3a8a, #9333ea);
+
+  color: rgb(110, 47, 47);
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
   padding: 24px;
-
-  /* Dynamic gradient using CSS variables set in inline style */
-  background: radial-gradient(
-      circle at top,
-      hsl(var(--hue) 90% 60% / 0.35),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at bottom,
-      hsl(var(--accentHue) 90% 60% / 0.28),
-      transparent 50%
-    ),
-    linear-gradient(135deg, #0b1020, #111827);
 }
 
-.card {
-  width: min(720px, 92vw);
-  padding: 28px 26px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(10px);
+.clock {
+  /* Card styling */
+  background: #3a2f01dc; /* coffee brown*/
+  color: #111827;      /* dark gray */
+  padding: 28px 32px;
+  border-radius: 14px;
+
+  /* Typography */
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-align: center;
+
+  /* Depth */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
 }
 
-.title {
-  margin: 0 0 14px;
-  font-size: 22px;
-  letter-spacing: 0.3px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.time {
+.clock p {
   margin: 0;
-  font-size: clamp(22px, 3.2vw, 40px);
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  color: white;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-.hint {
-  margin: 14px 0 0;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
 }
